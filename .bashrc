@@ -90,18 +90,6 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias ls='ls -alF'
-alias lsa='\ls -aF'
-alias vi='vim'
-
-# some more variable alias
-# mention the alias for login user
-alias cd..="cd .."
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -128,7 +116,4 @@ fi
 
 # Local user's PATH setting 
 source .bash_setting_path
-
-#local_bin_dir=${HOME}/local/bin
-#test -d ${local_bin_dir} && export PATH=${PATH}:${local_bin_dir}
 
