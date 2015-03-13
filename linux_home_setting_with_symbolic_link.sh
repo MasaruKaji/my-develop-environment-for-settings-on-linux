@@ -1,6 +1,14 @@
 #! /bin/sh -
+
+# ユーザが個々人で記述し直す部分
+# リポジトリをクローンした場所へのパスを記述する。
+# リポジトリ名は補完されるので記述しなくても良い。
+prefix_dir=${HOME}/src
+
+
+# 以下、プログラム
 symbolicLinkDir=${HOME}
-srcFileDir="."
+srcFileDir=${prefix_dir}/my-develop-environment-for-settings-on-linux
 
 bashrc=.bashrc
 bash_aliases=.bash_aliases
@@ -15,23 +23,6 @@ createSymbolicLinkForFile()
 	symbolicLinkPath=$1
 	srcFilePath=$2
 
-#	if [ -e ${symbolicLinkPath} ]; then
-#		# シンボリックリンクを作成する場所に同一名のファイルがあった場合
-#		# エラー処理を記述する
-#		echo "error: ${symbolicLinkPath}"
-#		return 1
-#	fi
-#
-#	if [ ! -e ${srcFilePath} ]; then
-#		# シンボリックリンクで関係づけたいファイルが存在していない場合
-#		# エラー処理を記述する
-#		echo "error: ${srcFilePath}"
-#		return 1
-#	fi
-
-	echo "zzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
-	echo "symbolicLink: ${symbolicLinkPath}"
-	echo "FilePath: ${srcFilePath}"
 	ln -s ${symbolicLinkPath} ${srcFilePath}
 }
 
