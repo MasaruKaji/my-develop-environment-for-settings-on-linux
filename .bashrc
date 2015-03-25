@@ -103,6 +103,18 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# alias definitions(for one liner).
+if [ -d ~/.bash/ ]; then
+    if [ -f ~/.bash/.bash_one_liner_aliases ]; then
+        . ~/.bash/.bash_one_liner_aliases
+    else
+        touch ~/.bash/.bash_one_liner_aliases
+    fi
+else
+    mkdir ~/.bash
+    touch ~/.bash/.bash_one_liner_aliases
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
